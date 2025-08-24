@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact XYZ Airlines</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: url('contact.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(255,0,0,0.3);
+    }
+
+    nav .logo {
+      color: #ff4c4c;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff4c4c;
+      color: #000;
+    }
+
+    h2 {
+      font-size: 2.8em;
+      color: #ff4c4c;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff4c4c;
+    }
+
+    .contact-section {
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(0,0,0,0.7);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,0,0,0.3);
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .info-card:hover {
+      transform: scale(1.05);
+    }
+
+    .info-card i {
+      font-size: 2em;
+      color: #ff4c4c;
+      margin-bottom: 10px;
+    }
+
+    .info-card h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      font-size: 0.95em;
+      color: #ddd;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1em;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      padding: 12px;
+      background: #ff4c4c;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: black;
+      color: #ff4c4c;
+      border: 1px solid #ff4c4c;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 10px rgba(255,0,0,0.2);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">XYZ Airlines</div>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <h2>Contact Us</h2>
+  <div class="contact-section">
+
+    <div class="contact-info">
+      <div class="info-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Address</h3>
+        <p>XYZ Airlines HQ, Terminal 3, Sky Avenue, New Delhi, India</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Phone</h3>
+        <p>+91 98765 43210</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email</h3>
+        <p>support@xyzairlines.com</p>
+      </div>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 XYZ Airlines. All rights reserved. | Contact: support@xyzairlines.com
+  </footer>
+
+</body>
+</html>

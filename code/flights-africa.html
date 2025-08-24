@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flights to Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+      background-image: url('africa.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      background-color: rgba(0,0,0,0.85);
+      padding: 15px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 2px 10px rgba(255,0,0,0.5);
+      z-index: 1000;
+    }
+    nav .logo { color: #ff4c4c; font-size: 1.5em; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a {
+      color: white; text-decoration: none;
+      font-size: 1em; padding: 5px 10px; border-radius: 5px;
+      transition: 0.3s; display: flex; align-items: center; gap: 8px;
+    }
+    nav ul li a:hover { background-color: #ff4c4c; color: white; }
+    h2 {
+      margin-top: 120px;
+      font-size: 2.8em;
+      text-shadow: 0 0 15px #ff4c4c;
+    }
+    .flight {
+      background: rgba(255,255,255,0.1);
+      margin: 20px auto; padding: 20px;
+      width: 60%; border-radius: 10px;
+      box-shadow: 0 0 15px #ff4c4c;
+      font-size: 1.2em;
+    }
+    .flight button {
+      padding: 10px 20px;
+      background: #ff4c4c; color: white;
+      border: none; border-radius: 5px;
+      cursor: pointer; box-shadow: 0 0 10px #ff4c4c;
+      transition: 0.3s;
+    }
+    .flight button:hover {
+      background: white; color: #ff4c4c;
+      border: 1px solid #ff4c4c;
+    }
+    footer {
+      background-color: rgba(0,0,0,0.85);
+      color: white; text-align: center;
+      padding: 30px 20px; font-size: 0.9em;
+      box-shadow: 0 -2px 10px rgba(255,0,0,0.3);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">XYZ Airlines</div>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <h2>Available Flights to Africa</h2>
+
+  <div class="flight"><p>SA-601 | 08-08-2025 | 07:00AM | 9hrs | Rs.13000</p><button onclick="location.href='booking-form.html?destination=7&flight=SA-601'">Book Now</button></div>
+  <div class="flight"><p>SA-602 | 09-08-2025 | 09:00AM | 10hrs | Rs.12500</p><button onclick="location.href='booking-form.html?destination=7&flight=SA-602'">Book Now</button></div>
+  <div class="flight"><p>SA-603 | 10-08-2025 | 11:00AM | 9hrs | Rs.12800</p><button onclick="location.href='booking-form.html?destination=7&flight=SA-603'">Book Now</button></div>
+  <div class="flight"><p>SA-604 | 11-08-2025 | 01:00PM | 9hrs | Rs.12700</p><button onclick="location.href='booking-form.html?destination=7&flight=SA-604'">Book Now</button></div>
+
+  <footer>
+    &copy; 2025 XYZ Airlines. All rights reserved. | Contact: support@xyzairlines.com
+  </footer>
+</body>
+</html>

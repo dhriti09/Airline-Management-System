@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Booking Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: sans-serif;
+      background-image: url('booking.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      background-color: #000;
+      padding: 15px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid #fff;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid transparent;
+    }
+
+    nav ul li a:hover {
+      border: 1px solid #fff;
+    }
+h2 {
+  margin-top: 140px;
+  text-align: center;
+  font-size: 3.5rem;
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  text-shadow: 0 0 10px black;
+  animation: zoomNotice 1.5s ease-in-out infinite;
+}
+
+/* Zoom-in Zoom-out Animation */
+@keyframes zoomNotice {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+    
+    form {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      width: 50%;
+      margin: 30px auto;
+      border-radius: 10px;
+      border: 1px solid #fff;
+    }
+
+    .field {
+      width: 80%;
+      margin: 15px auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .field i {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    input, select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #000;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      border-top: 1px solid #fff;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">XYZ Airlines</div>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Heading -->
+  <h2>Confirm Your Booking</h2>
+
+  <!-- Booking Form -->
+  <form action="/cgi-bin/book.cgi" method="GET">
+    <div class="field">
+      <i class="fa-solid fa-signature"></i>
+      <input type="text" name="name" placeholder="Full Name" required>
+    </div>
+    <div class="field">
+      <i class="fa-solid fa-pager"></i>
+      <input type="number" name="age" placeholder="Age" min="1" required>
+    </div>
+    <div class="field">
+      <i class="fa-solid fa-person"></i>
+      <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <i class="fa-solid fa-address-book"></i>
+      <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="field">
+      <i class="fa-solid fa-phone"></i>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
+
+    <!-- Hidden fields populated by JS -->
+    <input type="hidden" name="destination" id="dest">
+    <input type="hidden" name="flight" id="flight">
+
+    <button type="submit">Submit Booking</button>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 XYZ Airlines. All rights reserved. | Contact: support@xyzairlines.com
+  </footer>
+
+  <!-- JS to populate hidden fields -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("dest").value = params.get("destination");
+    document.getElementById("flight").value = params.get("flight");
+  </script>
+
+</body>
+</html>

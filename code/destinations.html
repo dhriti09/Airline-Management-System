@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choose Your Destination</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #ffffff;
+      color: #333;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f8f8f8;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+      color: #d10000;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav ul li a:hover {
+      background-color: #d10000;
+      color: white;
+    }
+
+    h2 {
+      margin-top: 100px;
+      font-size: 2.5em;
+      color: #d10000;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      background: #f0f0f0;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #d10000;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      background: #d10000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background: white;
+      color: #d10000;
+      border: 1px solid #d10000;
+    }
+
+    footer {
+      background-color: #f8f8f8;
+      color: #333;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">XYZ Airlines</div>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Heading -->
+  <h2>Select Your Destination</h2>
+
+  <!-- Destination Grid -->
+  <div class="grid">
+    <div class="card">
+      <img src="images/dubai.jpg" alt="Dubai">
+      <h3>Dubai</h3>
+      <button onclick="location.href='flights-dubai.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/india.jpg" alt="India">
+      <h3>India</h3>
+      <button onclick="location.href='flights-india.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/canada.jpg" alt="Canada">
+      <h3>Canada</h3>
+      <button onclick="location.href='flights-canada.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/uk.jpg" alt="UK">
+      <h3>UK</h3>
+      <button onclick="location.href='flights-uk.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/usa.jpg" alt="USA">
+      <h3>USA</h3>
+      <button onclick="location.href='flights-usa.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/australia.jpg" alt="Australia">
+      <h3>Australia</h3>
+      <button onclick="location.href='flights-australia.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/africa.jpg" alt="Africa">
+      <h3>Africa</h3>
+      <button onclick="location.href='flights-africa.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/china.jpg" alt="China">
+      <h3>China</h3>
+      <button onclick="location.href='flights-china.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/japan.jpg" alt="Japan">
+      <h3>Japan</h3>
+      <button onclick="location.href='flights-japan.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/brazil.jpg" alt="Brazil">
+      <h3>Brazil</h3>
+      <button onclick="location.href='flights-brazil.html'">View Flights</button>
+    </div>
+    <div class="card">
+      <img src="images/europe.jpg" alt="Europe">
+      <h3>Europe</h3>
+      <button onclick="location.href='flights-europe.html'">View Flights</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 XYZ Airlines. All rights reserved. | Contact: support@xyzairlines.com
+  </footer>
+
+</body>
+</html>
