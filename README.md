@@ -14,19 +14,6 @@ A modular, class-based Airline Management System built using **C++ (CGI)** for b
 
 
 
-### 📁 Folder Structure
-
-
-Airline-Management-System/
-├── assets/            3images
-│   ├── images
-├── code/            # HTML #CSS #Js frontend
-│   ├─frontend
-├── backend/          # C++ logic
-│   └── book.cpp
-├── .gitattributes
-├── README.md
-
 
  ⚙️ Setup Instructions
 
@@ -50,8 +37,10 @@ Use `g++` to compile:
 g++ book.cpp -o book.cgi
 ```
 
-#### 5. Run Locally
+5. Run Locally
 Visit `http://localhost/pages/index.html` to start using the system.
+
+ 
  📌 Notes
 
 - Backend is written in C++ for performance and control  
